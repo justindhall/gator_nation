@@ -8,7 +8,7 @@ class CLI
     puts "Hello Gator Fan! Welcome to the Gator Nation Football Podcast!"
 
     list_episodes
-    menu
+    #menu
 
     puts "Go Gators!"
 end
@@ -17,9 +17,8 @@ end
 def list_episodes
   puts "Here are the most recent episodes of the pod: "
   @episodes = Scraper.scrape_episodes
-  @episodes.each_with_index do |episode, index|
-    puts "#{index+1}. #{episode.name}"
-  end
+  @episodes
+
 end
 
 def menu

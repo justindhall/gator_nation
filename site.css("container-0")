@@ -1,0 +1,29 @@
+
+[1mFrom:[0m /home/justindhall/temporary/gator_nation/lib/scraper.rb @ line 30 Scraper.scrape_episodes:
+
+     [1;34m7[0m: [32mdef[0m [1;36mself[0m.[1;34mscrape_episodes[0m
+     [1;34m8[0m:   site = [1;34;4mNokogiri[0m::HTML(open([31m[1;31m"[0m[31mhttps://tunein.com/podcasts/Sports--Recreation-Podcasts/The-Gator-Nation-Football-Podcast-p1002581/[1;31m"[0m[31m[0m))
+     [1;34m9[0m: 
+    [1;34m10[0m:   episodes = site.css([31m[1;31m"[0m[31m.container-0[1;31m"[0m[31m[0m)
+    [1;34m11[0m: 
+    [1;34m12[0m:   list = {};
+    [1;34m13[0m: 
+    [1;34m14[0m:   episodes.each [32mdo[0m |episode|
+    [1;34m15[0m:     title = episode.css([31m[1;31m"[0m[31mh2.guide-item__guideItemTitleSingleLine___3ev9Q guide-item__guideItemTitle___VBHQg[1;31m"[0m[31m[0m).text
+    [1;34m16[0m:     episodes[title.to_sym] = {
+    [1;34m17[0m:       [33m:publish_date[0m => episode.css([31m[1;31m"[0m[31m.guide-item__guideItemSubtitle___2hQxF common__truncate___1k9L1[1;31m"[0m[31m[0m).text,
+    [1;34m18[0m: 
+    [1;34m19[0m:       [33m:description[0m => episode.css([31m[1;31m"[0m[31mdiv.ReactCollapse--content.guide-item__guideItemDescription___Qcx1v[1;31m"[0m[31m[0m)
+    [1;34m20[0m:     }
+    [1;34m21[0m: 
+    [1;34m22[0m: 
+    [1;34m23[0m:     [1;34m#title: "h2.guide-item__guideItemTitleSingleLine___3ev9Q guide-item__guideItemTitle___VBHQg"[0m
+    [1;34m24[0m:     [1;34m#publish_date: ".guide-item__guideItemSubtitle___2hQxF common__truncate___1k9L1"[0m
+    [1;34m25[0m:     [1;34m#description: "div.ReactCollapse--content.guide-item__guideItemDescription___Qcx1v"[0m
+    [1;34m26[0m:   [32mend[0m
+    [1;34m27[0m: 
+    [1;34m28[0m:     [1;34m#return list hash[0m
+    [1;34m29[0m:     list
+ => [1;34m30[0m:     binding.pry
+    [1;34m31[0m: [32mend[0m
+
