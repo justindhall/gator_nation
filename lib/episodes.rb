@@ -1,4 +1,4 @@
-class Episode 
+class Episodes
   attr_accessor :title, :publish_date, :description
 
   @@all = []
@@ -11,7 +11,7 @@ class Episode
     @@all << self
   end
 
-  def self.all 
+  def self.all
     @@all
   end
 
