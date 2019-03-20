@@ -25,5 +25,6 @@ class Scraper
 
       #return episodes hash
       episodes
+  end
 
 end

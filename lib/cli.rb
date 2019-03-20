@@ -1,3 +1,5 @@
+require_relative "../lib/scraper.rb"
+
 class CLI
   attr_accessor :episodes
 
