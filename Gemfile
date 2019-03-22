@@ -8,3 +8,4 @@ gemspec
 gem 'pry'
 gem 'require_all'
 gem 'nokogiri'
+gem 'jquery-rails'
